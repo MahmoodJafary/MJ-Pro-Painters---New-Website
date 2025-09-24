@@ -4125,7 +4125,7 @@ label {
 .review-slider {
   background-color: #0000;
   height: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonial-slider-arrow {
@@ -4145,12 +4145,13 @@ label {
 .review-slide {
   width: 100%;
   margin-right: 20px;
+  max-width: 648px;
 }
 
 .review-mask {
   width: 100%;
-  max-width: 648px;
-  overflow: visible;
+  /* max-width: 648px; */
+  overflow: hidden
 }
 
 .rating-text {
@@ -4708,7 +4709,7 @@ label {
 .slider-icon {
   background-color: #000;
   border-radius: 20px;
-  font-size: 30px;
+  /* font-size: 30px; */
   display: block;
 }
 
@@ -5097,9 +5098,9 @@ label {
 }
 
 .aboutpage-herosect-photo-form-wrapper {
-  grid-column-gap: 30px;
+  /* grid-column-gap: 30px;
   grid-row-gap: 30px;
-  display: flex;
+  display: flex; */
 }
 
 .pagination-margin {
@@ -6302,8 +6303,8 @@ label {
     grid-template-columns: 1fr;
   }
 
-  .review-mask {
-    max-width: 540px;
+  .review-slide {
+    max-width: 100%;
   }
 
   .rating-testimonial-quote {
@@ -6887,8 +6888,8 @@ label {
     grid-row-gap: 40px;
   }
 
-  .review-mask {
-    max-width: 390px;
+  .review-slide {
+    max-width: 100%;
   }
 
   .rating-text {
