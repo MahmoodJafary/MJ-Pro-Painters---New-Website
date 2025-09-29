@@ -3189,6 +3189,7 @@ label {
   width: 100%;
   padding: 30px;
   display: flex;
+  opacity: 1!important;
 }
 
 .review-card.style-1 {
