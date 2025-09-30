@@ -110,11 +110,11 @@
     box-sizing: border-box;
     padding: 10px 0;
   }
-  .project-thumbs-slider .swiper-wrapper {
+  /* .project-thumbs-slider .swiper-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
   .project-thumbs-slider .swiper-slide {
     width: 25%;
@@ -305,6 +305,36 @@
                <div class="swiper-slide">
                  <img class="about-image project-page" src="https://placehold.co/1320x800/e0e0e0/666666.png?text=Project+Image+5&font=roboto" alt="Project Image 5" loading="lazy">
                </div>
+                <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/ec8b00/ffffff.png?text=Project+Image+1&font=roboto" alt="Project Image 1" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/f0f0f0/333333.png?text=Project+Image+2&font=roboto" alt="Project Image 2" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/333333/ffffff.png?text=Project+Image+3&font=roboto" alt="Project Image 3" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/ffffff/ec8b00.png?text=Project+Image+4&font=roboto" alt="Project Image 4" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/e0e0e0/666666.png?text=Project+Image+5&font=roboto" alt="Project Image 5" loading="lazy">
+               </div>
+                <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/ec8b00/ffffff.png?text=Project+Image+1&font=roboto" alt="Project Image 1" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/f0f0f0/333333.png?text=Project+Image+2&font=roboto" alt="Project Image 2" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/333333/ffffff.png?text=Project+Image+3&font=roboto" alt="Project Image 3" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/ffffff/ec8b00.png?text=Project+Image+4&font=roboto" alt="Project Image 4" loading="lazy">
+               </div>
+               <div class="swiper-slide">
+                 <img class="about-image project-page" src="https://placehold.co/1320x800/e0e0e0/666666.png?text=Project+Image+5&font=roboto" alt="Project Image 5" loading="lazy">
+               </div>
             </div>
             <!-- Navigation arrows -->
             <div class="swiper-button-next"></div>
@@ -315,6 +345,36 @@
           <div class="swiper project-thumbs-slider" data-w-id="01be5310-31e8-da94-dffa-933e8d265b5f" style="opacity:0">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/ec8b00/ffffff.png?text=1&font=roboto" alt="Thumbnail 1">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/f0f0f0/333333.png?text=2&font=roboto" alt="Thumbnail 2">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/333333/ffffff.png?text=3&font=roboto" alt="Thumbnail 3">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/ffffff/ec8b00.png?text=4&font=roboto" alt="Thumbnail 4">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/e0e0e0/666666.png?text=5&font=roboto" alt="Thumbnail 5">
+               </div>
+                <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/ec8b00/ffffff.png?text=1&font=roboto" alt="Thumbnail 1">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/f0f0f0/333333.png?text=2&font=roboto" alt="Thumbnail 2">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/333333/ffffff.png?text=3&font=roboto" alt="Thumbnail 3">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/ffffff/ec8b00.png?text=4&font=roboto" alt="Thumbnail 4">
+               </div>
+               <div class="swiper-slide">
+                 <img src="https://placehold.co/150x100/e0e0e0/666666.png?text=5&font=roboto" alt="Thumbnail 5">
+               </div>
+                <div class="swiper-slide">
                  <img src="https://placehold.co/150x100/ec8b00/ffffff.png?text=1&font=roboto" alt="Thumbnail 1">
                </div>
                <div class="swiper-slide">
@@ -532,6 +592,8 @@
       var projectThumbsSlider = new Swiper('.project-thumbs-slider', {
         spaceBetween: 10,
         slidesPerView: 4,
+        centerInsufficientSlides: true,
+        centeredSlidesBounds: true,
         freeMode: true,
         watchSlidesProgress: true,
         breakpoints: {
