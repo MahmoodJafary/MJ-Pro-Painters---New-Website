@@ -1,17 +1,22 @@
-// Pagination functionality for blog listing page
+// Pagination functionality for multiple pages
 document.addEventListener('DOMContentLoaded', function() {
-  // Blog listing page pagination
-  const blogPagination = document.querySelector('.blog-section .pagination');
-  if (blogPagination) {
-    const paginationNumbersContainer = blogPagination.querySelector('.pagination-numbers');
-    const prevButton = blogPagination.querySelector('.pagination-button.prev');
-    const nextButton = blogPagination.querySelector('.pagination-button.next');
-    const itemsPerPage = 10; // Number of blog posts per page
+  
+  // Generic pagination function
+  function initializePagination(sectionSelector, itemSelector, itemsPerPage = 9) {
+    const paginationSection = document.querySelector(sectionSelector);
+    if (!paginationSection) return;
+    
+    const pagination = paginationSection.querySelector('.pagination');
+    if (!pagination) return;
+    
+    const paginationNumbersContainer = pagination.querySelector('.pagination-numbers');
+    const prevButton = pagination.querySelector('.pagination-button.prev');
+    const nextButton = pagination.querySelector('.pagination-button.next');
     let currentPage = 1;
 
-    // Get all blog items
-    const blogItems = document.querySelectorAll('.blog-collection-list .w-dyn-item');
-    const totalPages = Math.ceil(blogItems.length / itemsPerPage);
+    // Get all items
+    const items = document.querySelectorAll(itemSelector);
+    const totalPages = Math.ceil(items.length / itemsPerPage);
 
     // Generate pagination numbers dynamically based on total pages
     function generatePaginationNumbers() {
@@ -53,12 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Show/hide blog items based on current page
+    // Show/hide items based on current page
     function showPage(page) {
       const start = (page - 1) * itemsPerPage;
       const end = start + itemsPerPage;
 
-      blogItems.forEach((item, index) => {
+      items.forEach((item, index) => {
         if (index >= start && index < end) {
           item.style.display = '';
         } else {
@@ -72,9 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
       nextButton.style.opacity = page === totalPages ? '0.5' : '1';
       nextButton.style.pointerEvents = page === totalPages ? 'none' : 'auto';
 
-      // Scroll to top of blog section
+      // Scroll to top of section
       const bannerSection = document.querySelector('.banner-section');
-      bannerSection.scrollIntoView({ behavior: 'smooth' });
+      if (bannerSection) {
+        bannerSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     // Add click events to prev/next buttons
@@ -101,6 +108,16 @@ document.addEventListener('DOMContentLoaded', function() {
     showPage(1);
   }
 
+  // Initialize pagination for different pages
+  // Blog listing page
+  initializePagination('.blog-section', '.blog-collection-list .w-dyn-item', 9);
+  
+  // Reviews page
+  initializePagination('.review-section-01', '.review-wrapper .review-card', 6);
+  
+  // Recent projects page
+  initializePagination('.service-list-wrapper', '.service-collection-list-2 .w-dyn-item', 6);
+  
   // Blog detail page pagination
   const detailPagination = document.querySelector('.blog-details-section .pagination');
   if (detailPagination) {
